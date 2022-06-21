@@ -74,3 +74,27 @@ aside {
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
 }
+
+/* Selects all li's which are first
+child of their parent */
+li:first-child {
+  font-weight: bold;
+}
+
+/* Selects all li's which are last
+child of their parent */
+li:last-child {
+  font-style: italic;
+}
+
+/* Selects all li's which are 2 child
+of their parent  */
+li:nth-child(2) {
+  color: red;
+}
+
+/* Selects all li's which are odd numbered
+child of their parent */
+li:nth-child(odd) {
+  color: blue;
+}
