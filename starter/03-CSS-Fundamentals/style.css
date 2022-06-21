@@ -98,3 +98,32 @@ child of their parent */
 li:nth-child(odd) {
   color: blue;
 }
+
+/* This wont work, since there's no p which is
+first child of article element. Although, there are p(s)
+nested deeper inside article element */
+article p:first-child {
+  color: red;
+}
+
+/* Targets only those anchor elements that 
+have href attribute */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline dotted orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
