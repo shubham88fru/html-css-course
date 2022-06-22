@@ -1,9 +1,11 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+/* styles defined in * apply to every element on page,
+but with a catch that these properties are not inherited.
+It has lowest priority in case of conflicts */
+* {
+}
+
+/* Property defined in body get inherited */
+body {
   font-family: sans-serif;
   color: #444;
 }
