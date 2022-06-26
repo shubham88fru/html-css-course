@@ -40,7 +40,7 @@ article {
   padding-right: 40px; */
   padding: 20px 40px; /*top-bottom left-right*/
   margin-bottom: 60px;
-  height: 80px;
+  /* height: 80px; */
 }
 
 .post-header {
@@ -185,4 +185,19 @@ a:active {
 .post-img {
   width: 100%; /*% of width of parent container*/
   height: auto;
+}
+
+nav a:link {
+  /* background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+  display: block; */
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+/* chaining pseudo classes is possible */
+nav a:link:last-child {
+  margin-right: 0;
 }
