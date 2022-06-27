@@ -212,3 +212,43 @@ button {
   bottom: 50px; /* by default the px for top left bottom etc for absolute position is wrt viewport*/
   right: 50px;
 }
+
+/* pseudo elements are written with 2 colons */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* + -> adajacent sibling selector 
+  Below selects all first lines of p(s) 
+  which are adajacent sibling(next to each other)
+  to h3
+*/
+h3 + p::first-line {
+  color: red;
+}
+
+h2 {
+  position: relative;
+}
+/* `after` pseudo element creats a pseudo element
+  that will automatically become the very last child
+  of the selected element. 
+  
+  `before` pseudo element creats a pseudo element
+  that will automatically become the very first child
+  of the selected element.
+  */
+h2::after {
+  content: 'TOP';
+  color: #444;
+  background-color: #ffe70e;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
