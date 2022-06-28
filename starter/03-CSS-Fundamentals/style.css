@@ -235,6 +235,9 @@ h2 {
 /* `after` pseudo element creats a pseudo element
   that will automatically become the very last child
   of the selected element. 
+
+  mandatory for ::after to have a content, even if 
+  empty, but is mandatory for ::after to take effect
   
   `before` pseudo element creats a pseudo element
   that will automatically become the very first child
@@ -275,4 +278,11 @@ h1 {
 
 nav {
   float: right;
+}
+
+/* hack to fix float clearing issue */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
 }
