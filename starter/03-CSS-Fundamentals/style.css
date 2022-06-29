@@ -10,6 +10,12 @@
 * {
   margin: 0;
   padding: 0;
+  /* with this, specified width and height are measured 
+  from border to border otherwise if we dont, adding 
+  padding increases the final widht and height of box 
+  beyond what has been specified by height and widht properties.
+  */
+  box-sizing: border-box;
 }
 
 /* Property defined in body get inherited */
@@ -55,8 +61,7 @@ aside {
   border-bottom: 5px solid #1098ad;
   /* padding-top: 50px;
   padding-bottom: 50px; */
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
 }
 
 h1,
@@ -86,6 +91,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 p {
@@ -129,6 +135,7 @@ footer p {
 
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 /* Selects all li's which are first
