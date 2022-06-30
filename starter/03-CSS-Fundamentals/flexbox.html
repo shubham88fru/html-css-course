@@ -68,6 +68,39 @@
         gap: 30px;
       }
 
+      .el {
+        /*
+          Property of flex item. `flex` is a shorthand
+          for 3 properties - `flex-grow: 0`, `flex-shrink: 1` &
+          `flex-basis: auto`. 
+
+          `flex-basis`: used to size flex items (in place of using width property)
+                        if content of item needs more space, browser will increase
+                        the size, hence `flex-basis` is not rigid as width.
+        */
+        flex-basis: 100px;
+
+        /* Property of flex item. Determines whether flexbox is allowed
+          to shrink items if they start overflowing outsied the container 
+          becuase of their widths
+          (default) 1 - allowed, meaning flexbox will shrink items if their
+                      specified widths makes them overflow and try to keep
+                      the items within the container.
+          0 - not allowed. Flexbox wont give a shit if the items start getting
+              out of the container. It will respect the specified width.
+        */
+        flex-shrink: 0;
+
+        /* Property of flex item. Determines whether flexbox is allowed to
+          grow size of items in case it needs to, to make them fill the container.
+        
+          (default) 0 - no. i.e items will occupy only the size they need to fit their
+                      content. flexbox doesn't give a shit it container is filled or not.
+          1|2|3.. - yes. items will grow so as to fit the container.
+        */
+        flex-grow: 1;
+      }
+
       .el--1 {
         /* property of flex item. This overrides `align-items` applied
           at flex container level for this specific flex item.
