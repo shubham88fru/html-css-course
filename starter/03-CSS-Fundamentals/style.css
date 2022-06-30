@@ -203,7 +203,6 @@ nav a:link {
   display: block; */
   display: inline-block;
   margin-right: 20px;
-  margin-top: 10px;
 }
 
 /* chaining pseudo classes is possible */
@@ -264,16 +263,18 @@ h2::after {
   right: -25px;
 }
 
-/* FLOATS */
-/* float will remove this element out of normal flow of html
-and stick it to left*/
-.author-img {
+/* Layout using FLOATS */
+
+/* 
+  float will remove this element out of normal flow of html
+  and stick it to left
+*/
+/* .author-img {
   float: left;
   margin-bottom: 20px;
 }
 
 .author {
-  /* padding-left: 80px; */
   margin-top: 10px;
   float: left;
   margin-left: 20px;
@@ -285,10 +286,10 @@ h1 {
 
 nav {
   float: right;
-}
+} */
 
 /* hack to fix float clearing issue */
-.clearfix::after {
+/* .clearfix::after {
   content: '';
   display: block;
   clear: both;
@@ -306,4 +307,62 @@ aside {
 
 footer {
   clear: both;
+} */
+
+/* Layout using FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center; /*align flex items vertically*/
+  justify-content: space-between; /* divide empty space among flex items*/
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* adds gap of specified value bw flex items */
+  margin-bottom: 30px;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.row {
+  display: flex;
+  gap: 75px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+article {
+  flex: 1; /* allow this flex item to grow as much as it can in available space */
+  margin-bottom: 0;
+}
+
+aside {
+  /* flex-basis: 300px;
+  flex-shrink: 0; */
+  flex: 0 0 300px;
 }
