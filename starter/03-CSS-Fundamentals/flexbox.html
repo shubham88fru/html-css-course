@@ -46,7 +46,7 @@
                     vertically of flex container. 
         `flex-start`: will align flex items at top of flex container
         `flex-end`: will align flex items at end of flex container
-        `flex-strech`: default. Each flex item will strech to
+        `strech`: default. Each flex item will strech vertically to
                       fill the flex container
         */
         align-items: center;
@@ -56,8 +56,37 @@
           `space-between`: will seperate the flex items will
           equal spaces between them to fill the flex container
           horizontally.
-         */
+        */
         justify-content: center;
+
+        /* Adds a gap of specified value between
+          flex items. Doesn't add any space after
+          the last item, which would have been the 
+          case if we used margin-left etc on flex 
+          items to acheive this.
+        */
+        gap: 30px;
+      }
+
+      .el--1 {
+        /* property of flex item. This overrides `align-items` applied
+          at flex container level for this specific flex item.
+          possible values same as `align-items` 
+        */
+        align-self: flex-start;
+      }
+
+      .el--6 {
+        /* property of flex item. default value 0 for all flex items
+          A -ve value for a particular flex item moves the particular
+          flex item before all others in the list of flex items. Hence,
+          here this element will be rendered first even though it isn't
+          in the actual html.
+          
+          a positive value, similarly, move the item to last of list.
+          higher the +ve/-ve, farther the item is in the list.
+        */
+        order: -1;
       }
     </style>
   </head>
@@ -69,8 +98,8 @@
       <div class="el el--4">are</div>
       <div class="el el--5">amazing</div>
       <div class="el el--6">languages</div>
-      <div class="el el--7">to</div>
-      <div class="el el--8">learn</div>
+      <!-- <div class="el el--7">to</div>
+      <div class="el el--8">learn</div> -->
     </div>
   </body>
 </html>
