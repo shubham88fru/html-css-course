@@ -40,6 +40,39 @@
         margin: 40px;
 
         /* CSS GRID */
+        display: grid; /*Enables CSS grid.*/
+
+        /*
+          Creates 2 columns of specified widths and places 
+          grid-items in as many rows as needed.
+        */
+        grid-template-columns: 250px 150px;
+
+        /*
+          Sizes the rows with specified widhts.
+          Grid items will then strech to fill this
+          specified height. 
+        */
+        grid-template-rows: 300px 200px;
+
+        /* 
+          Creates gap of specified value b/w
+          grid items. In both horizontal and
+          vertical direction.
+        */
+        gap: 30px;
+
+        /*
+          gap of specified value bw grid items
+          horizontally. 
+        */
+        column-gap: 30px;
+
+        /*
+          gap of specified value bw grid items
+          vertically. 
+        */
+        row-gap: 10px;
       }
 
       .container--2 {
