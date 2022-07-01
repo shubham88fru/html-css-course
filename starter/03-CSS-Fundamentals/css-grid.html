@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        /* height: 150px; */
       }
       .el--4 {
         background-color: goldenrod;
@@ -45,15 +45,32 @@
         /*
           Creates 2 columns of specified widths and places 
           grid-items in as many rows as needed.
+
+          `fr` - alternate unit to px. allows the column to
+              grow and fill available empty space.
+          `auto` - the column will take only take that much space 
+                needed by its content.
         */
-        grid-template-columns: 250px 150px;
+        /* grid-template-columns: 200px 200px 1fr 1fr; */
+        /* grid-template-columns: 1fr 1fr 1fr auto; */
+
+        /*
+          below is equivalent to writing 1fr four times.
+          basically saying we need 4 columns with width 1fr. 
+        */
+        grid-template-columns: repeat(4, 1fr);
 
         /*
           Sizes the rows with specified widhts.
           Grid items will then strech to fill this
           specified height. 
         */
-        grid-template-rows: 300px 200px;
+        grid-template-rows: 2fr 1fr;
+
+        /*
+          will make 1fr equivalent to 500px for rows 
+        */
+        height: 500px;
 
         /* 
           Creates gap of specified value b/w
