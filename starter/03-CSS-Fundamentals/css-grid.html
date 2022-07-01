@@ -65,7 +65,7 @@
           Grid items will then strech to fill this
           specified height. 
         */
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
 
         /*
           will make 1fr equivalent to 500px for rows 
@@ -83,13 +83,49 @@
           gap of specified value bw grid items
           horizontally. 
         */
-        column-gap: 30px;
+        column-gap: 20px;
 
         /*
           gap of specified value bw grid items
           vertically. 
         */
-        row-gap: 10px;
+        row-gap: 40px;
+      }
+
+      .el--8 {
+        /* 
+          Place this particular grid item at
+          column 2 (end at column 3)
+
+          nos. 2 and 3 represent column lines.
+          column lines will always be one more than no. of colums
+         */
+        grid-column: 2 / 3; /* can be shorthanded to just `n` if we have (n / n + 1) */
+
+        /*
+          Place this grid item at row 1
+          and ending at row 2 
+
+          nos. 1 and 2 represent row lines.
+          row lines will always be one more than no. of rows
+         */
+        grid-row: 1; /* equivalent to 1/2 */
+      }
+
+      .el--2 {
+        /* 
+          start at column 1 and span (end after) 3 columns.
+          
+          use -1 in denominator to indicate that span till the
+          last column. This way we dont need to think about 
+          how many columns there are in the grid.
+        */
+        grid-column: 1 / -1;
+        grid-row: 2 / span 2;
+      }
+
+      .el--6 {
+        /* grid-row: 3 / 6; */
       }
 
       .container--2 {
