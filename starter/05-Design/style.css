@@ -148,6 +148,10 @@ img {
 }
 
 /* CHAIRS */
+.chair {
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07); /*horiz-offset verti-offset blur scale color*/
+}
+
 .chair-box {
   padding: 24px;
 }
