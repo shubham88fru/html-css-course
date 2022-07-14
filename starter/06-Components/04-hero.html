@@ -29,6 +29,14 @@
 
       header {
         height: 100vh;
+        position: relative;
+        background-image: linear-gradient(
+            rgba(34, 34, 34, 0.601),
+            rgba(34, 34, 34, 0.601)
+          ),
+          url(hero.jpg); /*stack 2 backgrounds on one other*/
+        background-size: cover; /*will automatically resize to cover the elemnt*/
+        color: #fff;
       }
 
       nav {
@@ -36,11 +44,30 @@
         font-weight: 700;
         display: flex;
         justify-content: space-between;
+        padding-top: 32px;
+        /*background-image: linear-gradient(
+          to right,
+          red,
+          blue
+        );*/ /*horizontal gradient from red to blue*/
+      }
+
+      .header--container {
+        width: 1200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .header-container-inner {
+        width: 50%;
       }
 
       h1 {
         font-size: 52px;
         margin-bottom: 32px;
+        line-height: 1.05;
       }
 
       p {
@@ -77,13 +104,16 @@
         <div>LOGO</div>
         <div>NAVIGATION</div>
       </nav>
-      <div class="container">
-        <h1>A healthy meal, delivered to your door everyday</h1>
-        <p>
-          The smar 365-days-per-year subscription that will make you eat healthy
-          again. Tailored to your personal tastes and nutritional needs
-        </p>
-        <a href="#" class="btn">Start eating well</a>
+      <div class="container header--container">
+        <div class="header-container-inner">
+          <h1>A healthy meal, delivered to your door everyday</h1>
+          <p>
+            The smar 365-days-per-year subscription that will make you eat
+            healthy again. Tailored to your personal tastes and nutritional
+            needs
+          </p>
+          <a href="#" class="btn">Start eating well</a>
+        </div>
       </div>
     </header>
     <section>
