@@ -5,9 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        font-weight: bold;
+        height: 100vh;
+        color: #343a40;
+        font-size: 24px;
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+      }
+
+      nav,
+      menu,
+      main,
+      section,
+      aside {
+        padding-top: 24px;
+      }
+      nav {
+        background-color: #343a40;
+        grid-row: 1 / -1;
+        color: #fff;
+      }
+
+      menu {
+        background-color: #7048e8;
+        color: #fff;
+        grid-column: 2 / -1;
+      }
+
+      section {
+        background-color: #e9ecef;
+      }
+
+      aside {
+        background-color: #e9ecef;
+      }
+    </style>
   </head>
   <body>
     <nav>Nav</nav>
-    <menu></menu>
+    <menu>Menu</menu>
+    <section>Inbox</section>
+    <main>Email</main>
+    <aside>Additional Info</aside>
   </body>
 </html>
