@@ -32,9 +32,41 @@
   box-sizing: border-box;
 }
 
+html {
+  /*
+     should not set exact pixel vlaue for font here
+     coz this will override user's browser preference 
+     if any.
+
+     with %, we'll respect the preference atleast a bit
+     because our root font size will scale up/down
+     depending on user's browser preference.
+    */
+  font-size: 62.5%;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+}
+
+.test {
+  /* width: 1000px; */ /*gives rigid width*/
+  /*
+  if available width is more, it will take full specified max widht
+  else it will shrink to fit in the available widht
+  */
+  max-width: 1000px; /*maximum width is 1000px*/
+  background-color: red;
+
+  /* 
+  `rem` is root element's font size i.e. html
+  tag's font size. If no font size is specified
+  on html then `rem` is 16px which is default browser
+  setting (which can be overriden by users) 
+  */
+  max-width: 50rem; /*50*16px = 800px*/
+  padding: 4rem;
 }
