@@ -52,6 +52,18 @@ body {
   color: #555;
 }
 
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+/* *************************************** */
 .test {
   /* width: 1000px; */ /*gives rigid width*/
   /*
@@ -70,3 +82,4 @@ body {
   max-width: 50rem; /*50*16px = 800px*/
   padding: 4rem;
 }
+/* *************************************** */
