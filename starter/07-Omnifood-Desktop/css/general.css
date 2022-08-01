@@ -130,6 +130,33 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 600;
+
+  /* 
+   `transition` property is always specified on
+   original state (i.e link and visited in this case) 
+   but will animate when the state changes (i.e to 
+   hover etc from original in this case)
+
+   `all` means all the properties that change
+   in the below state will be transitioned over
+   1s.
+
+   we can add a single property as well if we want to 
+   animate just one of them.
+  */
+  /* transition: all 1s; */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
 .btn--full:link,
 .btn--full:visited {
   color: #fff;
