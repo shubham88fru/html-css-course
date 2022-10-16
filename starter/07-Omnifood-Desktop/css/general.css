@@ -66,6 +66,12 @@ body {
   color: #555;
 }
 
+/* Remove defualt blue outline on tab */
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 /* ************************** */
 /* GENERAL REUSABLE COMPONENTS */
 /* ************************** */
@@ -148,6 +154,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -156,7 +163,9 @@ body {
   border-radius: 9px;
   text-decoration: none;
   font-weight: 600;
-
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
   /* 
    `transition` property is always specified on
    original state (i.e link and visited in this case) 
@@ -207,6 +216,18 @@ body {
 
   /* `inset` keyword to add border inside the element */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: white;
+  color: #555;
 }
 
 .list {
