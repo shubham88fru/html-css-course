@@ -1,0 +1,28 @@
+/* 
+NOTE: rem and em do not depend on html font size in media queries
+Instead 1rem = 1em = 16px for media queries. For writing breakpoints
+of media queries, always use `em` over `rem`. 
+*/
+
+/* ***************************************** */
+/* BELOW 1344px (84*16) - (Smaller desktops) */
+/* ***************************************** */
+@media (max-width: 84em) {
+  .hero {
+    /* 
+        Note that once we are within the media block,
+        1 rem will work the same way it does on normal css.
+        the NOTE at the top is only for @media. Not for rem and em
+        inside the @media block.
+        */
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
