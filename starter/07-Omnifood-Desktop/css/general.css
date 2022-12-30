@@ -55,6 +55,8 @@ html {
        with %, we'll respect the preference atleast a bit
        because our root font size will scale up/down
        depending on user's browser preference.
+
+       10px/16px = 0.625 = 62.5% --> To make 1rem = 10px (which by default is 16px)
       */
   font-size: 62.5%;
 }
